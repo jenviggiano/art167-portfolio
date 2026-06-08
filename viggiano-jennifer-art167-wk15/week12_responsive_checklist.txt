@@ -1,0 +1,18 @@
+ART 167 — Week 12 Responsive Checklist
+Name: Jennifer Viggiano
+
+Test widths (PASS/FAIL)
+A) 375px wide (phone)
+  - Nav is easy to tap and not cramped: PASS
+  - Work projects stack or wrap cleanly: PASS
+  - No horizontal scrolling: PASS
+B) 768px wide (tablet)
+  - Nav still works and looks clean: PASS
+  - Work projects show 2 columns (if space allows): PASS
+C) 1200px wide (desktop)
+  - Text line length stays readable (max-width): PASS
+  - Work projects show 3 columns (if space allows): PASS
+
+Fix log
+- Fix 1: Added flex-wrap so project cards can stack cleanly on small screens.
+- Fix 2: Updated nav spacing so links are easier to tap on phones.
