@@ -35,11 +35,6 @@ header p {
 }
 
 /* ===== Week 14: Projects Grid (lecture pattern) ===== */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-}
 
 /* ===== Week 13: CSS Grid project layout (replaces flexbox) ===== */
 .projects {
@@ -48,8 +43,8 @@ header p {
  gap: 16px;
 }
 
-* ===== Week 13: Grid responsive behavior ===== */
-@media (max-width: 800px) {
+/* ===== Week 13: Grid responsive behavior ===== */
+@media (max-width: 900px) {
  .projects { grid-template-columns: repeat(2, 1fr); }
 }
 
