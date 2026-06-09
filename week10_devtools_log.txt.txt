@@ -1,0 +1,37 @@
+ART 167 — Week 10 DevTools Log
+Name: Jennifer Viggiano
+
+A) Elements panel checks
+1) Selected element:
+  - What I clicked on: <a href="index.html">Home</a>
+  - One CSS rule applied (selector + property): ul {font-family: Playfair Display, Arial, Helvetica, sans-serif}
+  - Where it comes from (styles.css line/section if you can tell): line 74-76
+
+2) Box model check (Computed tab)
+  - Element checked: 
+  - Margin/Padding/Border observation:
+
+B) Console panel checks
+3) Any errors? (YES/NO): NO
+  - If YES, copy one error line here:
+  - What it means in plain English:
+
+C) Network panel checks
+4) Confirm styles.css loaded (YES/NO): YES
+5) Confirm Google Fonts loaded (YES/NO): YES
+  - If NO, what did you see (404, blocked, wrong link)?
+
+D) Two fixes I made (required)
+Fix 1:
+ - Problem:
+ - Found using (Elements/Console/Network):
+ - File changed:
+ - What I changed:
+ - Verified fix in DevTools (how?):
+
+Fix 2:
+ - Problem:
+ - Found using (Elements/Console/Network):
+ - File changed:
+ - What I changed:
+ - Verified fix in DevTools (how?):

@@ -1,0 +1,392 @@
+/* ===== Week 7: Base styles ===== */
+* { box-sizing: border-box; }
+
+html {
+    background-color: #869960
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.content-area {
+ border-top: 3px solid #869970;
+ border-bottom: 3px solid black;   
+}
+
+header p {
+  font-size: 85%;
+  color: #666;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
+.main-area {
+  width: 60%;
+  float: left;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Week 14: Projects Grid (lecture pattern) ===== */
+
+/* ===== Week 13: CSS Grid project layout (replaces flexbox) ===== */
+.projects {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 16px;
+}
+
+/* ===== Week 13: Grid responsive behavior ===== */
+@media (max-width: 900px) {
+ .projects { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+ .projects { grid-template-columns: 1fr; }
+}
+
+/* ===== Week 11: Full-width hero background (image + overlay gradient) ===== */
+.hero {
+ /* full-width trick even when main has a max-width */
+ margin-left: calc(50% - 50vw);
+ margin-right: calc(50% - 50vw);
+ padding: 60px 20px;
+
+ /* overlay gradient FIRST, image SECOND */
+ background-image:
+   linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+   url("../img/flower.jpg");
+ background-size: cover;
+ background-position: center;
+ color: #fff;
+}
+
+.hero-inner {
+ max-width: 900px;
+ margin: 0 auto;
+ animation: fadeInUp 500ms ease-out;
+}
+
+.hero h2 { margin-top: 0; }
+
+/* ===== Week 9: Typography (2 fonts: body + headings) ===== */
+
+body {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 825px; /* limit line length */
+  margin: 0 auto;   /* center the reading column */
+}
+
+/* HEADINGS font + fallbacks, make sure you switch your heading fonts with your own selection, fallbacks can stay as-is */
+h1, h2, h3 {
+  font-family: "Patua One", Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 1.25rem 0 0.5rem 0;
+  text-align: center;
+}
+
+p {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+ul {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+ol {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+table {
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+}
+
+/* ===== Week 11: Subtle header gradient ===== */
+header {
+ background: linear-gradient(180deg, rgba(28, 101, 17, 0.275), rgba(0,0,0,0));
+}
+
+/* Navigation typography */
+header nav a {
+  font-weight: 600;
+}
+
+/* Form Styles */
+form {
+  background-color: #9b5e5e;
+  padding: 30px 40px;
+}
+
+.hidden-label {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+  width: 100%;
+  display:block;
+  box-sizing: border-box;
+  padding: 8px;
+  height: 40px;
+  font-family: Tahoma, sans-serif;
+  font-size: 100%;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+/* ===== Week 7: Navigation menu using floats ===== */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  overflow: hidden;
+}
+
+header nav li {
+  float: left;
+  color: #869970;
+}
+
+header nav a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-right: 1px solid #ccc;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Week 7: Cascade demonstration ===== */
+.project p { line-height: 1.8; } /* override p for project paragraphs */
+
+/* ===== Week 7: Overlap + transparency ===== */
+.feature {
+  position: relative;
+  display: inline-block;
+}
+
+.feature img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+/* ===== Week 7: Footer ===== */
+footer {
+  text-align: center;
+  font-size: 85%;
+  color: #666;
+  border-top: 1px solid #ccc;
+  padding: 12px 16px;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+/* Site navigation */
+.site-nav ul {
+  margin-top: 20px;
+}
+
+.site-nav li {
+  list-style: none ;
+  float: left;
+  margin-right: 5px;
+}
+
+.site-nav a {
+  background-color: white;
+  display : block;
+  color : #869970;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 3px solid #869970;
+}
+
+.site-nav a:hover {
+  background-color: #869970;
+  color: white;
+}
+
+header nav a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+/* ===== Week 11: CSS sprites for nav icons ===== */
+header nav a.nav-home,
+header nav a.nav-work,
+header nav a.nav-contact {
+ background-image: url("../img/sprite.png");
+ background-repeat: no-repeat;
+ background-size: 192px 64px; /* 3 icons across */
+ padding-left: 64px; /* make space for icon */
+ background-position-y: 50%;
+}
+
+header nav a.nav-home { background-position: 0 50%; }
+header nav a.nav-work { background-position: -64px 50%; }
+header nav a.nav-contact { background-position: -128px 50%; }
+
+/* ===== Week 12: Responsive breakpoints ===== */
+
+/* Medium screens (900px and below): slightly tighter spacing */
+@media (max-width: 900px) {
+ section { padding: 10px; }
+ header nav a { padding: 10px 12px; }
+}
+
+/* Small screens (600px and below): stack nav + simplify grid */
+@media (max-width: 600px) {
+ header nav li { float: none; }
+ header nav a {
+   display: block;
+   border-right: none;
+   border-bottom: 1px solid #ccc;
+ }
+
+.projects {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+}
+
+.projects .project {
+flex: 1 1 220px;
+min-width: 0;
+  }
+} 
+
+/* Featured card spans taller on larger screens (desktop) */
+@media screen and (min-width: 850px) {
+  .projects .project.featured {
+    grid-row: span 2;
+    display: grid;
+    align-content: center;
+    font-size: 1.05rem;
+  }
+}
+
+/* ===== Week 14: Project card polish ===== */
+.projects .project {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(5, 123, 47, 0.432);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.projects .project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(1, 96, 36, 0.742);
+}
+
+/* ===== Week 14: Nav interaction feedback ===== */
+header nav a {
+  transition: background-color 160ms ease;
+}
+
+header nav a:hover {
+  background-color: rgba(0,0,0,0.06);
+}
+
+header nav a:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ===== Week 14: Submit button polish ===== */
+button[type="submit"] {
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: transform 160ms ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ===== Week 14: Simple animation ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Week 14: Respect reduced motion preferences ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
